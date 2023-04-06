@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/kwonmoon/equalizer-landing-page)
-- Live Site URL: [Netlify]()
+- Live Site URL: [Netlify](https://cute-kashata-af5d9b.netlify.app/)
 
 ## My process
 
