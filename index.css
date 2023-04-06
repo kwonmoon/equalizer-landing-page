@@ -1,0 +1,472 @@
+:root {
+   /* colors */
+   --color-light-cyan: 177, 68%, 64%;
+   --color-reddish-orange: 12, 94%, 65%;
+   --color-goldenrod: 33, 100%, 70%;
+   --color-off-white: 20, 33%, 98%;
+   --color-deep-navy: 244, 23%, 12%;
+   --color-pale-gray: 0, 0%, 95%;
+
+   /* fonts */
+   --ff-sans: "IBM Plex Sans", sans-serif;
+}
+
+/* --------------- */
+/* Reset           */
+/* --------------- */
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+* {
+   margin: 0;
+}
+
+html,
+body {
+   height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+   display: block;
+   max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+   font: inherit;
+}
+
+h1 {
+   font-size: 5.5rem;
+   line-height: 1;
+   letter-spacing: -0.0625rem;
+}
+
+h2 {
+   font-size: 2.5rem;
+   line-height: 1.3;
+}
+
+.body-1 {
+   font-size: 1.25rem;
+   line-height: 1.7;
+}
+
+.body-2 {
+   font-size: 1rem;
+   line-height: 1.625;
+}
+
+body {
+   background-color: hsl( var(--color-off-white) );
+   color: hsl( var(--color-deep-navy) );
+   font-family: var(--ff-sans);
+   margin-inline: auto;
+   background-image: url("./assets/bg-main-desktop.png");
+   background-repeat: no-repeat;
+   background-position: -146px -272px;
+}
+
+/* --------------- */
+/* Utility Classes */
+/* --------------- */
+
+.container {
+   max-width: 90rem; /* 1440px */
+   padding-inline: 10.3125rem;
+   margin-inline: auto;
+   position: relative;
+}
+
+.flex {
+   display: flex;
+   gap: var(--gap, 1rem);
+}
+
+.grid {
+   display: grid;
+   gap: var(--gap, 1rem);
+}
+
+.flow > :where(:not(:first-child)) {
+   margin-top: var(--flow-space, 1rem);
+}
+
+/* --------------- */
+/* Components      */
+/* --------------- */
+
+/* Header */
+
+header {
+   padding: 3.875rem 0 7.9375rem;
+}
+
+.pattern-1 {
+   position: absolute;
+   top: -2.5rem;
+   right: 0;
+}
+
+/* Main */
+
+main > h1 {
+   width: 80%;
+   margin-bottom: 2.5rem;
+}
+
+main > p {
+   width: 75%;
+   margin-bottom: 20rem;
+}
+
+/* Equalizer container */
+
+.equalizer-container {
+   width: 69.375rem;
+   height: 37.5rem;
+   background-color: hsl( var(--color-deep-navy) );
+   border-radius: 0.75rem;
+   position: relative;
+   margin-bottom: 12.625rem;
+}
+
+.pattern-2 {
+   position: absolute;
+   top: -2.5rem;
+   left: 21rem;
+}
+
+.equalizer-image {
+   width: 19.5rem;
+   height: 40.125rem;
+   position: absolute;
+   top: -13.3125rem;
+   left: 6.375rem;
+}
+
+.equalizer-card {
+   width: 27.875rem;
+   height: 39rem;
+   background-color: hsl( var(--color-reddish-orange));
+   color: hsl( var(--color-off-white) );
+   position: absolute;
+   top: 5.625rem;
+   right: 5.9375rem;
+   padding: 3.625rem 3.6875rem 3rem 3.375rem;
+   border-radius: 0.75rem;
+}
+
+.equalizer-card > h2 {
+   margin-bottom: 1.375rem;
+}
+
+.equalizer-card > p {
+   margin-bottom: 2.4375rem;
+}
+
+.membership-fee {
+   align-items: center;
+   padding-bottom: 2.875rem;
+}
+
+.membership-fee .amount {
+   font-size: 4.0625rem;
+   font-weight: 700;
+   line-height: 0.8;
+}
+
+.membership-fee .per-unit {
+   font-size: 1.25rem;
+   line-height: 1.6;
+   letter-spacing: -0.0125rem;
+}
+
+button {
+   border: 0;
+}
+
+button:hover {
+   cursor: pointer;
+}
+
+.button-card {
+   width: 20.8125rem;
+   height: 3.8125rem;
+   border-radius: 0.75rem;
+   font-size: 1.125rem;
+   font-weight: 700;
+   line-height: 1.7778;
+   letter-spacing: -0.01125rem;
+   justify-content: center;
+   align-items: center;
+   --gap: 0.495rem;
+   margin-bottom: 0.75rem;
+}
+
+.iso {
+   background-color: hsl( var(--color-deep-navy) );
+   color: hsl( var(--color-off-white) );
+}
+
+.iso:hover {
+   background-color: hsl( var(--color-light-cyan) );
+}
+
+.android {
+   background-color: hsl( var(--color-off-white) );
+   color: hsl( var(--color-deep-navy) );
+}
+
+.android:hover {
+   background-color: hsl( var(--color-goldenrod) );
+}
+
+/* Footer */
+
+.footer {
+   justify-content: flex-start;
+   --gap: 8.61rem;
+   align-items: flex-start;
+   padding-bottom: 5.625rem;
+}
+
+.footer p {
+   font-size: 1rem;
+   line-height: 1.5rem;
+   width: 35%;
+   margin-right: 12.5rem;
+}
+
+.footer p span {
+   font-weight: 700;
+}
+
+.social-logos {
+   --gap: 1.25rem;
+   margin-top: 1.5rem;
+}
+
+.social-logos img:hover {
+   cursor: pointer;
+   filter: invert(81%) sepia(43%) saturate(7373%) hue-rotate(326deg)
+   brightness(100%) contrast(97%);
+}
+
+@media screen and (max-width: 62rem) {
+   h1 {
+      font-size: 4rem;
+      letter-spacing: -0.045625rem;
+   }
+
+   h2 {
+      font-size: 2rem;
+      line-height: 1.25;
+   }
+   
+   .body-1 {
+      font-size: 1.125rem;
+      line-height: 1.5556;
+   }
+
+   body {
+      background-image: url("./assets/bg-main-tablet.png");
+      background-size: 61.4375rem 50.5rem;
+      background-position: -254px -112px;
+   }  
+   
+   .container {
+      max-width: 48rem; /* 768px */
+      padding-inline: 2rem;
+      background-image: none;
+   }
+
+   .pattern-1 {
+      width: 16.6669rem;
+      height: 25rem;
+      position: absolute;
+      top: -2rem;
+      right: -2.23rem;
+   }   
+
+   main > p {
+      width: 73%;
+      margin-bottom: 15.625rem;
+   }
+
+   .equalizer-container {
+      width: 43.5rem;
+      border-radius: 0.75rem;
+      margin-bottom: 11.4375rem;
+   }
+
+   .pattern-2 {
+      width: 280px;
+      height: 420px;
+      top: -2rem;
+      left: 14.25rem;
+   }
+   
+   .equalizer-image {
+      width: 16.875rem;
+      height: 34.75rem;
+      top: -8.625rem;
+      left: 4rem;
+   }
+
+   .equalizer-card {
+      width: 25rem;
+      height: 34.125rem;
+      top: 9.375rem;
+      right: 3.625rem;
+      padding: 3rem;
+   }
+
+   .equalizer-card > h2 {
+      margin-bottom: 0.75rem;
+   }
+
+   .equalizer-card > p {
+      margin-bottom: 2rem;
+   }
+
+   .membership-fee {
+      padding-bottom: 2.625rem;
+   }
+
+   .footer {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      --gap: 1rem;
+      align-items: flex-start;
+      padding-bottom: 5.375rem;
+   }
+
+   .footer > img {
+      flex-basis: 100%;
+      width: auto;
+      height: 2rem;
+      margin-right: 40rem;
+   }
+
+   .footer > p {
+      flex-basis: 55%;
+      margin-right: 12rem;
+   }
+
+   .footer .social-logos {
+      flex-basis: 10%;
+   }  
+}
+
+@media screen and (max-width: 38rem) {
+   h1 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+      letter-spacing: -0.028125rem;
+   }
+
+   .body-1 {
+      font-size: 1rem;
+      line-height: 1.5;
+   }
+
+   body {
+      background-image: url("./assets/bg-main-mobile.png");
+      background-size: 17.5875rem 30rem;
+      background-position: 159px -104px;
+   }  
+
+   .container {
+      max-width: 23.4375rem; /* 375px */
+      padding-inline: 0;
+   }   
+
+   header {
+      padding: 2.5rem 1.5rem 4rem;
+   }   
+   
+   .pattern-1 {
+      display: none;
+   }
+
+   main > h1 {
+      width: 100%;
+      padding-inline: 1.5rem;
+      margin-bottom: 1.25rem;
+   }
+   
+   main > p {
+      width: 100%;
+      padding-inline: 1.5rem;
+      margin-bottom: 10.375rem;
+   }
+
+   .equalizer-container {
+      width: 23.4375rem;
+      margin-bottom: 24.375rem;
+   }
+
+   .pattern-2 {
+      top: 0rem;
+      left: 3rem;
+   }
+
+   .equalizer-image {
+      width: 13.0625rem;
+      height: 26.875rem;
+      top: -6.125rem;
+      left: 5.1rem;
+   }
+
+   .equalizer-card {
+      width: 23.4375rem;
+      height: 34.125rem;
+      top: 23.75rem;
+      right: 0;
+      padding: 3rem 2rem;
+   }
+
+   .equalizer-card > p {
+      font-size: 1.125rem;
+      line-height: 1.5556;
+   }
+
+   .membership-fee {
+      padding-bottom: 2rem;
+   }
+
+   .button-card {
+      width: 18.5rem;
+      height: 3.875rem;
+      margin-left: 0.625rem;
+      margin-bottom: 1rem;
+   }
+
+   .footer {
+      margin-inline: 1.5rem;
+      --gap: 2rem;
+      padding-bottom: 5rem;
+   }
+
+   .footer > p {
+      flex-basis: 100%;
+      line-height: 1.625;
+      margin-right: 1rem;
+   }
+
+   .footer .social-logos {
+      flex-basis: 100%;
+      margin-top: 2rem;
+   }  
+}
